@@ -127,19 +127,19 @@ struct ContentView: View {
             case .multiplication:
                 result = String(number1 * number2)
             case .division:
-            if number2 == 0 {
-                let errorString = "Divion by 0!"
+                if number2 == 0 {
+                    let errorString = "Divion by 0!"
+                    let attributedString = NSMutableAttributedString(string: errorString)
+                    attributedString.addAttribute(.foregroundColor, value: Color.red, range: NSRange(location: 0, length: attributedString.length))
+                    result = attributedString.string
+                } else {
+                    result = String(number1 / number2)
+                }
+            default:
+                let errorString = "Unkown Error!"
                 let attributedString = NSMutableAttributedString(string: errorString)
                 attributedString.addAttribute(.foregroundColor, value: Color.red, range: NSRange(location: 0, length: attributedString.length))
                 result = attributedString.string
-            } else {
-                result = String(number1 / number2)
-            }
-            default:
-            let errorString = "Unkown Error!"
-            let attributedString = NSMutableAttributedString(string: errorString)
-            attributedString.addAttribute(.foregroundColor, value: Color.red, range: NSRange(location: 0, length: attributedString.length))
-            result = attributedString.string
         }
     }
     func mathOpPressed(mathop: MathOp) -> Void {
