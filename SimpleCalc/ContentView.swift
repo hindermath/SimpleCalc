@@ -22,11 +22,11 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .multilineTextAlignment(.trailing)
                 .lineLimit(1)
-                .padding([.top, .leading, .trailing])
+                .padding(.all)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .accessibilityLabel(result)
                 .accessibilityHint(result)
-                .help(result)
+                .help(String(result))
                 .onTapGesture(count: 2, perform: {
                     result = "0"
                     number1 = 0
@@ -192,25 +192,19 @@ struct ContentView: View {
         number2 = Double(result) ?? 0
         switch mathOperation {
             case .plus:
-                result = String(number1 + number2)
+            result = String(number1 + number2)
             case .minus:
                 result = String(number1 - number2)
             case .multiplication:
                 result = String(number1 * number2)
             case .division:
                 if number2 == 0 {
-                    let errorString = "Divion by 0!"
-                    let attributedString = NSMutableAttributedString(string: errorString)
-                    attributedString.addAttribute(.foregroundColor, value: Color.red, range: NSRange(location: 0, length: attributedString.length))
-                    result = attributedString.string
+                    result = "Divion by 0!"
                 } else {
                     result = String(number1 / number2)
                 }
             default:
-                let errorString = "Unkown Error!"
-                let attributedString = NSMutableAttributedString(string: errorString)
-                attributedString.addAttribute(.foregroundColor, value: Color.red, range: NSRange(location: 0, length: attributedString.length))
-                result = attributedString.string
+            result = "Unkown error!"
         }
     }
     func mathOpPressed(mathop: MathOp) -> Void {
