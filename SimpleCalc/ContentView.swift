@@ -37,6 +37,7 @@ struct ContentView: View {
                     
                 })
                 .foregroundColor(errorState ? .red : .black)
+                .background(.gray)
             
             HStack {
                 Button("7", action: {buttonPressed(number:"7")})
