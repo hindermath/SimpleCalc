@@ -17,22 +17,22 @@ struct ContentView: View {
     }
     var body: some View {
         VStack {
-            HStack {
-                Text(result)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.trailing)
-                    .lineLimit(1)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .accessibilityLabel(result)
-                    .accessibilityHint(result)
-                    .help(result)
-                    .onTapGesture(count: 2, perform: {
-                        result = "0"
-                    })
-
-            }
-            .padding([.top, .leading, .trailing])
+            Text(result)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.trailing)
+                .lineLimit(1)
+                .padding([.top, .leading, .trailing])
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                .accessibilityLabel(result)
+                .accessibilityHint(result)
+                .help(result)
+                .onTapGesture(count: 2, perform: {
+                    result = "0"
+                    number1 = 0
+                    number2 = 0
+                    mathOperation = MathOp.unknown
+                })
             
             HStack {
                 Button("7", action: {buttonPressed(number:"7")})
@@ -178,6 +178,7 @@ struct ContentView: View {
             }
             .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
         }
+        .padding(.all)
     }
     func buttonPressed(number : String) -> Void {
         if result == "0" {
