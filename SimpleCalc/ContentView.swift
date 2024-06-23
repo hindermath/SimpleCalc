@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var number1 : Double = 0
     @State private var number2 : Double = 0
     @State private var mathOperation : MathOp = .unknown
+    @State private var errorState : Bool = false
     enum MathOp {
         case plus, minus, multiplication, division, unknown
     }
@@ -32,7 +33,10 @@ struct ContentView: View {
                     number1 = 0
                     number2 = 0
                     mathOperation = MathOp.unknown
+                    errorState = false
+                    
                 })
+                .foregroundColor(errorState ? .red : .black)
             
             HStack {
                 Button("7", action: {buttonPressed(number:"7")})
@@ -200,11 +204,13 @@ struct ContentView: View {
             case .division:
                 if number2 == 0 {
                     result = "Divion by 0!"
+                    errorState = true
                 } else {
                     result = String(number1 / number2)
                 }
             default:
-            result = "Unkown error!"
+                result = "Unkown error!"
+                errorState = true
         }
     }
     func mathOpPressed(mathop: MathOp) -> Void {
