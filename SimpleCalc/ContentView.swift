@@ -38,7 +38,8 @@ struct ContentView: View {
                 })
                 .foregroundColor(errorState ? .red : .black)
                 .background(.gray)
-//                .onKeyPress(characters: <#T##CharacterSet#>, action: <#T##(KeyPress) -> KeyPress.Result#>)
+                .disabled(errorState ? false : true)
+
             
             HStack {
                 Button("7", action: {buttonPressed(number:"7")})
