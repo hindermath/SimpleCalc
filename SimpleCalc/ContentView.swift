@@ -38,6 +38,7 @@ struct ContentView: View {
                 })
                 .foregroundColor(errorState ? .red : .black)
                 .background(.gray)
+//                .onKeyPress(characters: <#T##CharacterSet#>, action: <#T##(KeyPress) -> KeyPress.Result#>)
             
             HStack {
                 Button("7", action: {buttonPressed(number:"7")})
@@ -101,8 +102,8 @@ struct ContentView: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.orange)
-                    .accessibilityLabel("-")
-                    .accessibilityHint("-")
+                    .accessibilityLabel("minus")
+                    .accessibilityHint("minus")
                     .help("minus")
 
                 
@@ -137,8 +138,8 @@ struct ContentView: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.orange)
-                    .accessibilityLabel("*")
-                    .accessibilityHint("*")
+                    .accessibilityLabel("muliplication")
+                    .accessibilityHint("muliplication")
                     .help("muliplication")
 
                 
@@ -149,8 +150,8 @@ struct ContentView: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.purple)
-                    .accessibilityLabel("-/+")
-                    .accessibilityHint("-/+")
+                    .accessibilityLabel("negation")
+                    .accessibilityHint("negation")
                     .help("negation")
 
                 Spacer()
@@ -166,8 +167,8 @@ struct ContentView: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.red)
-                    .accessibilityLabel("=")
-                    .accessibilityHint("=")
+                    .accessibilityLabel("equals")
+                    .accessibilityHint("equals")
                     .help("equals")
 
                 Spacer()
@@ -175,8 +176,8 @@ struct ContentView: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.orange)
-                    .accessibilityLabel("/")
-                    .accessibilityHint("/")
+                    .accessibilityLabel("divison")
+                    .accessibilityHint("divison")
                     .help("divison")
 
                 
