@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var number2 : Double = 0
     @State private var mathOperation : MathOp = .unknown
     @State private var errorState : Bool = false
+    @Environment(\.accessibilityEnabled) private var accessibilityEnabled
+
     enum MathOp {
         case plus, minus, multiplication, division, unknown
     }
