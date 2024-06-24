@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var mathOperation : MathOp = .unknown
     @State private var errorState : Bool = false
     @Environment(\.accessibilityEnabled) private var accessibilityEnabled
-
+    @FocusState private var isFocused : Bool
     enum MathOp {
         case plus, minus, multiplication, division, unknown
     }
@@ -41,6 +41,8 @@ struct ContentView: View {
                 .foregroundColor(errorState ? .red : .black)
                 .background(.gray)
                 .disabled(errorState ? false : true)
+                .focusable()
+                .focused($isFocused)
 
             
             HStack {
@@ -196,7 +198,10 @@ struct ContentView: View {
             result += number
         }
     }
-    func negatePressed() -> Void {result = String((Double(result) ?? 0) * -1)}
+    func negatePressed() -> Void {
+        result = String((Double(result) ?? 0) * -1)
+        isFocused = true
+    }
     func equalPressed() -> Void {
         number2 = Double(result) ?? 0
         switch mathOperation {
@@ -217,6 +222,7 @@ struct ContentView: View {
                 result = "Unkown error!"
                 errorState = true
         }
+        isFocused = true
     }
     func mathOpPressed(mathop: MathOp) -> Void {
         number1 = Double(result) ?? 0
