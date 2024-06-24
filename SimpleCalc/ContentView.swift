@@ -52,6 +52,8 @@ struct ContentView: View {
                     .accessibilityLabel("7")
                     .accessibilityHint("7")
                     .help("7")
+                    .keyboardShortcut("7", modifiers: .command)
+                
                 Spacer()
                 Button("8", action: {buttonPressed(number:"8")})
                     .padding()
@@ -59,7 +61,8 @@ struct ContentView: View {
                     .accessibilityLabel("8")
                     .accessibilityHint("8")
                     .help("8")
-
+                    .keyboardShortcut("8", modifiers: .command)
+                
                 Spacer()
                 Button("9", action: {buttonPressed(number:"9")})
                     .padding()
@@ -67,6 +70,8 @@ struct ContentView: View {
                     .accessibilityLabel("9")
                     .accessibilityHint("9")
                     .help("9")
+                    .keyboardShortcut("9", modifiers: .command)
+                
                 Spacer()
                 Button("+", action: {mathOpPressed(mathop:.plus)})
                     .padding()
@@ -75,6 +80,7 @@ struct ContentView: View {
                     .accessibilityLabel("plus")
                     .accessibilityHint("plus")
                     .help("plus")
+                    .keyboardShortcut("+", modifiers: .command)
 
             }.padding(.horizontal)
             
@@ -85,6 +91,7 @@ struct ContentView: View {
                     .accessibilityLabel("4")
                     .accessibilityHint("4")
                     .help("4")
+                    .keyboardShortcut("4", modifiers: .command)
 
                 Spacer()
                 Button("5", action: {buttonPressed(number:"5")})
@@ -93,6 +100,7 @@ struct ContentView: View {
                     .accessibilityLabel("5")
                     .accessibilityHint("5")
                     .help("5")
+                    .keyboardShortcut("5", modifiers: .command)
 
                 Spacer()
                 Button("6", action: {buttonPressed(number:"6")})
@@ -101,6 +109,7 @@ struct ContentView: View {
                     .accessibilityLabel("6")
                     .accessibilityHint("6")
                     .help("6")
+                    .keyboardShortcut("6", modifiers: .command)
 
                 Spacer()
                 Button("-", action: {mathOpPressed(mathop:.minus)})
@@ -110,8 +119,8 @@ struct ContentView: View {
                     .accessibilityLabel("minus")
                     .accessibilityHint("minus")
                     .help("minus")
+                    .keyboardShortcut("-", modifiers: .command)
 
-                
             }.padding(.horizontal)
             
             HStack {
@@ -121,6 +130,7 @@ struct ContentView: View {
                     .accessibilityLabel("1")
                     .accessibilityHint("1")
                     .help("1")
+                    .keyboardShortcut("1", modifiers: .command)
 
                 Spacer()
                 Button("2", action: {buttonPressed(number:"2")})
@@ -129,6 +139,7 @@ struct ContentView: View {
                     .accessibilityLabel("2")
                     .accessibilityHint("2")
                     .help("2")
+                    .keyboardShortcut("2", modifiers: .command)
 
                 Spacer()
                 Button("3", action: {buttonPressed(number:"3")})
@@ -137,6 +148,7 @@ struct ContentView: View {
                     .accessibilityLabel("3")
                     .accessibilityHint("3")
                     .help("3")
+                    .keyboardShortcut("3", modifiers: .command)
 
                 Spacer()
                 Button("*", action: {mathOpPressed(mathop:.multiplication)})
@@ -146,7 +158,7 @@ struct ContentView: View {
                     .accessibilityLabel("muliplication")
                     .accessibilityHint("muliplication")
                     .help("muliplication")
-
+                    .keyboardShortcut("*", modifiers: .command)
                 
             }.padding(.horizontal)
             
@@ -158,6 +170,8 @@ struct ContentView: View {
                     .accessibilityLabel("negation")
                     .accessibilityHint("negation")
                     .help("negation")
+                    .keyboardShortcut("-", modifiers: [.command,.shift])
+
 
                 Spacer()
                 Button("0", action: {buttonPressed(number:"0")})
@@ -166,6 +180,7 @@ struct ContentView: View {
                     .accessibilityLabel("0")
                     .accessibilityHint("0")
                     .help("0")
+                    .keyboardShortcut("0", modifiers: .command)
 
                 Spacer()
                 Button("=", action: equalPressed)
@@ -175,6 +190,7 @@ struct ContentView: View {
                     .accessibilityLabel("equals")
                     .accessibilityHint("equals")
                     .help("equals")
+                    .keyboardShortcut("=", modifiers: .command)
 
                 Spacer()
                 Button("/", action: {mathOpPressed(mathop:.division)})
@@ -184,7 +200,7 @@ struct ContentView: View {
                     .accessibilityLabel("divison")
                     .accessibilityHint("divison")
                     .help("divison")
-
+                    .keyboardShortcut("/", modifiers: .command)
                 
             }
             .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
@@ -197,6 +213,7 @@ struct ContentView: View {
         } else {
             result += number
         }
+        isFocused = true
     }
     func negatePressed() -> Void {
         result = String((Double(result) ?? 0) * -1)
