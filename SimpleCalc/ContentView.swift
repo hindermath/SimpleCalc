@@ -20,7 +20,7 @@ struct ContentView: View {
     }
     var body: some View {
         VStack {
-            Text(result)
+            Text(LocalizedStringKey(result))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.trailing)

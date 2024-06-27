@@ -14,6 +14,7 @@
 		5313CF742C25E9D400964FB1 /* SimpleCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF732C25E9D400964FB1 /* SimpleCalcTests.swift */; };
 		5313CF7E2C25E9D400964FB1 /* SimpleCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF7D2C25E9D400964FB1 /* SimpleCalcUITests.swift */; };
 		5313CF802C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF7F2C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift */; };
+		53CBC4DF2C2D361A002C5E9E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 53CBC4DE2C2D361A002C5E9E /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		5313CF792C25E9D400964FB1 /* SimpleCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5313CF7D2C25E9D400964FB1 /* SimpleCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalcUITests.swift; sourceTree = "<group>"; };
 		5313CF7F2C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalcUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53CBC4DE2C2D361A002C5E9E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		5313CF552C25E9D200964FB1 = {
 			isa = PBXGroup;
 			children = (
+				53CBC4DE2C2D361A002C5E9E /* Localizable.xcstrings */,
 				5313CF602C25E9D200964FB1 /* SimpleCalc */,
 				5313CF722C25E9D400964FB1 /* SimpleCalcTests */,
 				5313CF7C2C25E9D400964FB1 /* SimpleCalcUITests */,
@@ -235,6 +238,7 @@
 			files = (
 				5313CF6A2C25E9D400964FB1 /* Preview Assets.xcassets in Resources */,
 				5313CF662C25E9D400964FB1 /* Assets.xcassets in Resources */,
+				53CBC4DF2C2D361A002C5E9E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
