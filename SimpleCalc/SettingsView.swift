@@ -13,12 +13,14 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Slider(value: $seconds_to_wait, in: 1...5, step: 1) {
-                    Text("Seconds to wait")
-                }
+                Text("Seconds to wait")
+                Slider(value: $seconds_to_wait, in: 1...5, step: 1) {}
             }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             .navigationTitle("Settings")
         }
+        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        Spacer()
     }
 }
 
