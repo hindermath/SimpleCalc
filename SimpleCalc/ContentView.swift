@@ -30,14 +30,7 @@ struct ContentView: View {
                 .accessibilityLabel(result)
                 .accessibilityHint(result)
                 .help(String(result))
-                .onTapGesture(count: 2, perform: {
-                    result = "0"
-                    number1 = 0
-                    number2 = 0
-                    mathOperation = MathOp.unknown
-                    errorState = false
-                    
-                })
+                .onTapGesture(count: 2, perform: Clear)
                 .foregroundColor(errorState ? .red : .black)
                 .background(.gray)
                 .disabled(errorState ? false : true)
@@ -256,6 +249,13 @@ struct ContentView: View {
         default:
             mathOperation = .unknown
         }
+    }
+    func Clear() -> Void {
+        result = "0"
+        number1 = 0
+        number2 = 0
+        mathOperation = MathOp.unknown
+        errorState = false
     }
 }
 
