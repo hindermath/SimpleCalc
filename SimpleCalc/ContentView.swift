@@ -41,6 +41,7 @@ struct ContentView: View {
                 .focusable()
                 .focused($isFocused)
             }
+            .swipeActions(edge:.trailing) {}
 
             
             HStack {
