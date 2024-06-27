@@ -11,7 +11,7 @@ struct SettingsView: View {
     @AppStorage("slider_seconds_to_wait") private var seconds_to_wait = 2.0
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Slider(value: $seconds_to_wait, in: 1...5, step: 1) {
                     Text("Seconds to wait")

@@ -21,7 +21,9 @@ struct ContentView: View {
     @AppStorage("slider_seconds_to_wait") private var seconds_to_wait = 2.0
 
     var body: some View {
+        NavigationStack {
         VStack {
+            NavigationLink(destination: SettingsView()) {
             Text(LocalizedStringKey(result))
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -38,6 +40,7 @@ struct ContentView: View {
                 .disabled(errorState ? false : true)
                 .focusable()
                 .focused($isFocused)
+            }
 
             
             HStack {
@@ -201,7 +204,9 @@ struct ContentView: View {
             .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
         }
         .padding(.all)
+        }
     }
+    
     func buttonPressed(number : String) -> Void {
         if result == "0" {
             result = number
