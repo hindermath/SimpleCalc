@@ -225,12 +225,14 @@ struct ContentView: View {
                 if number2 == 0 {
                     result = "Divison by 0!"
                     errorState = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: Clear)
                 } else {
                     result = String(number1 / number2)
                 }
             default:
                 result = "Unkown error!"
                 errorState = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: Clear)
         }
         isFocused = true
     }
