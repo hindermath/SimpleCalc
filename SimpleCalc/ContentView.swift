@@ -155,9 +155,9 @@ struct ContentView: View {
                     .padding()
                     .buttonStyle(.borderedProminent)
                     .tint(.orange)
-                    .accessibilityLabel("muliplication")
-                    .accessibilityHint("muliplication")
-                    .help("muliplication")
+                    .accessibilityLabel("multiplication")
+                    .accessibilityHint("multiplication")
+                    .help("multiplication")
                     .keyboardShortcut("*", modifiers: .command)
                 
             }.padding(.horizontal)
@@ -230,7 +230,7 @@ struct ContentView: View {
                 result = String(number1 * number2)
             case .division:
                 if number2 == 0 {
-                    result = "Divion by 0!"
+                    result = "Divison by 0!"
                     errorState = true
                 } else {
                     result = String(number1 / number2)
