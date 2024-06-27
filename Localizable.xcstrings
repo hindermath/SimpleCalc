@@ -222,6 +222,12 @@
         }
       }
     },
+    "Seconds to wait" : {
+
+    },
+    "Settings" : {
+
+    },
     "Unkown error!" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -16,6 +16,7 @@
 		5313CF802C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF7F2C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift */; };
 		53CBC4DF2C2D361A002C5E9E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 53CBC4DE2C2D361A002C5E9E /* Localizable.xcstrings */; };
 		53CBC4E12C2D646B002C5E9E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53CBC4E02C2D646A002C5E9E /* Settings.bundle */; };
+		53CBC4E32C2D6622002C5E9E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CBC4E22C2D6622002C5E9E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5313CF7F2C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalcUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53CBC4DE2C2D361A002C5E9E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		53CBC4E02C2D646A002C5E9E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		53CBC4E22C2D6622002C5E9E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5313CF612C25E9D200964FB1 /* SimpleCalcApp.swift */,
+				53CBC4E22C2D6622002C5E9E /* SettingsView.swift */,
 				5313CF632C25E9D200964FB1 /* ContentView.swift */,
 				5313CF652C25E9D400964FB1 /* Assets.xcassets */,
 				5313CF672C25E9D400964FB1 /* SimpleCalc.entitlements */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53CBC4E32C2D6622002C5E9E /* SettingsView.swift in Sources */,
 				5313CF642C25E9D200964FB1 /* ContentView.swift in Sources */,
 				5313CF622C25E9D200964FB1 /* SimpleCalcApp.swift in Sources */,
 			);

@@ -18,6 +18,8 @@ struct ContentView: View {
     enum MathOp {
         case plus, minus, multiplication, division, unknown
     }
+    @AppStorage("slider_seconds_to_wait") private var seconds_to_wait = 2.0
+
     var body: some View {
         VStack {
             Text(LocalizedStringKey(result))
@@ -225,14 +227,14 @@ struct ContentView: View {
                 if number2 == 0 {
                     result = "Divison by 0!"
                     errorState = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: Clear)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds_to_wait, execute: Clear)
                 } else {
                     result = String(number1 / number2)
                 }
             default:
                 result = "Unkown error!"
                 errorState = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: Clear)
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds_to_wait, execute: Clear)
         }
         isFocused = true
     }
