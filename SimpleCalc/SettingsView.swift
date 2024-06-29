@@ -14,10 +14,20 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Text("Seconds to wait")
+                    .font(.title)
+                    .accessibilityLabel("Seconds to wait")
+                    .accessibilityHint("Seconds to wait")
+                    .help("Seconds to wait")
                 Slider(value: $seconds_to_wait, in: 1...5, step: 1) {}
+                    .accessibilityLabel("Horizontal Slider")
+                    .accessibilityHint("Horizontal Slider")
+                    .help("Horizontal Slider")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             .navigationTitle("Settings")
+            .accessibilityLabel("Settings")
+            .accessibilityHint("Settings")
+            .help("Settings")
         }
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         Spacer()
