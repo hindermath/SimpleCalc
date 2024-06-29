@@ -266,9 +266,21 @@
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unbekannter Fehler!"
+          "variations" : {
+            "device" : {
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Fehler!"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Unbekannter Fehler!"
+                }
+              }
+            }
           }
         }
       }
