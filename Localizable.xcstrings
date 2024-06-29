@@ -182,6 +182,16 @@
         }
       }
     },
+    "Horizontal Slider" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Horizontaler Schieber"
+          }
+        }
+      }
+    },
     "minus" : {
       "localizations" : {
         "de" : {
