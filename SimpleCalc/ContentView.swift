@@ -204,6 +204,9 @@ struct ContentView: View {
             }
             .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
             .navigationTitle("SimpleCalc")
+            .accessibilityLabel("SimpleCalc")
+            .accessibilityHint("SimpleCalc")
+            .help("SimpleCalc")
         }
         .padding(.all)
         }
