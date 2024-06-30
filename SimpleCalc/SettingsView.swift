@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("slider_seconds_to_wait") private var seconds_to_wait = 2.0
+    @AppStorage("toggle_switch_enable_slider") private var enable_slider : Bool = false
     
     var body: some View {
         NavigationStack {
@@ -23,10 +24,13 @@ struct SettingsView: View {
                         .accessibilityLabel("Seconds to wait")
                         .accessibilityHint("Seconds to wait")
                         .help("Seconds to wait")
+                    Toggle("Enable", isOn: $enable_slider)
+                        .font(.largeTitle)
                     Slider(value: $seconds_to_wait, in: 1...5, step: 1) {}
                         .accessibilityLabel("Horizontal Slider")
                         .accessibilityHint("Horizontal Slider")
                         .help("Horizontal Slider")
+                        .disabled(enable_slider ? false : true)
                 }
                 .padding(.all)
                 .accessibilityLabel("General")
