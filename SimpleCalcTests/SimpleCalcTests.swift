@@ -12,19 +12,14 @@ final class SimpleCalcTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        contentView = ContentView()
+        contentView = ContentView(result: "42", number1: 2, number2: 1, mathOperation: .plus, errorState: true)
     }
     override func tearDown() {
         contentView = nil
+        super.tearDown()
     }
 
     func testClear() {
-        // Arrange
-        contentView.result = "42"
-        contentView.number1 = 1
-        contentView.number2 = 2
-        contentView.mathOperation = .plus
-        contentView.errorState = true
         // Act
         contentView.Clear()
         // Assert
@@ -33,5 +28,28 @@ final class SimpleCalcTests: XCTestCase {
         XCTAssertEqual(contentView.number2, 0)
         XCTAssertEqual(contentView.mathOperation, .unknown)
         XCTAssertFalse(contentView.errorState)
+    }
+    
+    func testMathOpPressed() {
+        // Arrange
+        contentView.result = "42"
+        contentView.number1 = 0
+        contentView.mathOperation = .unknown
+        // Act
+        contentView.mathOpPressed(mathop: .plus)
+        // Assert
+        XCTAssertEqual(contentView.number1, 42.0)
+        XCTAssertEqual(contentView.result, "0")
+        XCTAssertEqual(contentView.mathOperation, .plus)
+        
+    }
+    func testNegatePressed() {
+        // Arrange
+        contentView.result = "42"
+        // Act
+        contentView.negatePressed()
+        // Assert
+        XCTAssertEqual(contentView.result, "-42")
+
     }
 }
