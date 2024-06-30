@@ -19,6 +19,7 @@ struct ContentView: View {
         case plus, minus, multiplication, division, unknown
     }
     @AppStorage("slider_seconds_to_wait") private var seconds_to_wait = 2.0
+    @AppStorage("toggle_switch_enable_slider") private var enable_slider : Bool = false
 
     var body: some View {
         NavigationStack {
