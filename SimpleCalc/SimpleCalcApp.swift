@@ -13,5 +13,11 @@ struct SimpleCalcApp: App {
         WindowGroup {
             ContentView()
         }
+        // Create the typical settings page of macOS apps
+        #if os(macOS)
+        Settings {
+            SettingsView()
+        }
+        #endif
     }
 }
