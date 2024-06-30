@@ -15,6 +15,9 @@
 		5313CF7E2C25E9D400964FB1 /* SimpleCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF7D2C25E9D400964FB1 /* SimpleCalcUITests.swift */; };
 		5313CF802C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF7F2C25E9D400964FB1 /* SimpleCalcUITestsLaunchTests.swift */; };
 		53B5938F2C31652E00670B80 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53B5938E2C31652D00670B80 /* Settings.bundle */; };
+		53B593902C318E6800670B80 /* SimpleCalcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF612C25E9D200964FB1 /* SimpleCalcApp.swift */; };
+		53B593922C318FAF00670B80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313CF632C25E9D200964FB1 /* ContentView.swift */; };
+		53B593932C31914900670B80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CBC4E22C2D6622002C5E9E /* SettingsView.swift */; };
 		53CBC4DF2C2D361A002C5E9E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 53CBC4DE2C2D361A002C5E9E /* Localizable.xcstrings */; };
 		53CBC4E32C2D6622002C5E9E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CBC4E22C2D6622002C5E9E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -281,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B593902C318E6800670B80 /* SimpleCalcApp.swift in Sources */,
+				53B593932C31914900670B80 /* SettingsView.swift in Sources */,
 				5313CF742C25E9D400964FB1 /* SimpleCalcTests.swift in Sources */,
+				53B593922C318FAF00670B80 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
