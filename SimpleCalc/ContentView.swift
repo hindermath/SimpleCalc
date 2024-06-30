@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var result : String = "0"
-    @State private var number1 : Double = 0
-    @State private var number2 : Double = 0
-    @State private var mathOperation : MathOp = .unknown
-    @State private var errorState : Bool = false
+    @State var result : String = "0"
+    @State var number1 : Double = 0
+    @State var number2 : Double = 0
+    @State var mathOperation : MathOp = .unknown
+    @State var errorState : Bool = false
     @Environment(\.accessibilityEnabled) private var accessibilityEnabled
     @FocusState private var isFocused : Bool
     enum MathOp {
