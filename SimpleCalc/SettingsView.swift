@@ -13,15 +13,24 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Text("Seconds to wait")
-                    .font(.title)
-                    .accessibilityLabel("Seconds to wait")
-                    .accessibilityHint("Seconds to wait")
-                    .help("Seconds to wait")
-                Slider(value: $seconds_to_wait, in: 1...5, step: 1) {}
-                    .accessibilityLabel("Horizontal Slider")
-                    .accessibilityHint("Horizontal Slider")
-                    .help("Horizontal Slider")
+                Section(header: Text("General")
+                    .padding(.all)
+                    .font(.largeTitle)
+                ) {
+                    Text("Seconds to wait")
+                        .font(.title)
+                        .accessibilityLabel("Seconds to wait")
+                        .accessibilityHint("Seconds to wait")
+                        .help("Seconds to wait")
+                    Slider(value: $seconds_to_wait, in: 1...5, step: 1) {}
+                        .accessibilityLabel("Horizontal Slider")
+                        .accessibilityHint("Horizontal Slider")
+                        .help("Horizontal Slider")
+                }
+                .padding(.all)
+                .accessibilityLabel("General")
+                .accessibilityHint("General")
+                .help("General")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             .navigationTitle("Settings")
